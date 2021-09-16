@@ -1,0 +1,4 @@
+EanValidator.*
+Gs1Validator.iml
+vendor/
+composer.lock

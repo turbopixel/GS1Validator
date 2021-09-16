@@ -1,0 +1,32 @@
+{
+  "name": "turbopixel/gs1validator",
+  "description": "GS1 barcode validator class",
+  "version": "0.1",
+  "type": "library",
+  "license": "MIT",
+  "config": {
+    "platform": {
+      "php": "7.4"
+    }
+  },
+  "authors": [
+    {
+      "name": "turbopixel",
+      "email": "nico@nokes.de"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "turbopixel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "subiabre/appgati": "dev-master",
+    "phpunit/phpunit": "9.5.9"
+  }
+}
