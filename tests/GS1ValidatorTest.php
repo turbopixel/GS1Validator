@@ -40,6 +40,12 @@ class GS1ValidatorTest extends TestCase {
     $this->assertFalse($check);
   }
 
+  public function testIsLength13() {
+    $GS1Validator = new GS1Validator();
+
+    $this->assertSame($GS1Validator->strLength(4000417222008), 13);
+  }
+
 }
 
 // manual run
@@ -48,3 +54,4 @@ $UnitTest->testCheckDigitIsInt();
 $UnitTest->testCheckDigitIsSame();
 $UnitTest->testIsValidEan13();
 $UnitTest->testIsBadEan13();
+$UnitTest->testIsLength13();

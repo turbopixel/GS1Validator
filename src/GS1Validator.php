@@ -2,9 +2,22 @@
 
 namespace turbopixel;
 
+/**
+ * GS1Validator
+ *
+ * @author turbopixel
+ */
 class GS1Validator {
 
-  private $testEan = "5901234123457";
+  /**
+   * @param string $str
+   *
+   * @return int
+   */
+  public function strLength(string $str) : int {
+
+    return strlen($str);
+  }
 
   /**
    *
@@ -13,7 +26,7 @@ class GS1Validator {
    * @return bool
    */
   public function isValidEan13(string $ean) : bool {
-    $eanLength = strlen($ean);
+    $eanLength = $this->strLength($ean);
 
     if ($eanLength !== 13) {
       return false;
@@ -46,20 +59,3 @@ class GS1Validator {
   }
 
 }
-
-//$Validator = new GS1Validator();
-//echo "<pre>";
-//var_dump("4012345678901", $Validator->isValidEan13(4012345678901));
-//var_dump("4012345678901", $Validator->getEan13CheckDigit(4012345678901));
-//echo "<hr>";
-//var_dump("5901234123457", $Validator->isValidEan13(5901234123457));
-//var_dump("5901234123457", $Validator->getEan13CheckDigit(5901234123457));
-//echo "<hr>";
-//var_dump("590123412345", $Validator->isValidEan13(590123412345));
-//var_dump("590123412345", $Validator->getEan13CheckDigit(590123412345));
-//echo "<hr>";
-//var_dump("123456", $Validator->isValidEan13(123456));
-//var_dump("123456", $Validator->getEan13CheckDigit(123456));
-//echo "<hr>";
-//var_dump("4005249006710", $Validator->isValidEan13(4005249006710));
-//var_dump("4005249006710", $Validator->getEan13CheckDigit(4005249006710));
