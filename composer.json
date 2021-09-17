@@ -1,20 +1,34 @@
 {
   "name": "turbopixel/gs1validator",
   "description": "GS1 barcode validator class",
+  "keywords": [
+    "gs1",
+    "barcode",
+    "ean13",
+    "validator"
+  ],
   "version": "0.1",
   "type": "library",
   "license": "MIT",
-  "config": {
-    "platform": {
-      "php": "7.4"
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/turbopixel/GS1Validator"
     }
-  },
+  ],
   "authors": [
     {
       "name": "turbopixel",
       "email": "nico@nokes.de"
     }
   ],
+  "require": {
+    "php": ">=7.4.0"
+  },
+  "require-dev": {
+    "subiabre/appgati": "dev-master",
+    "phpunit/phpunit": "9.5.9"
+  },
   "autoload": {
     "psr-4": {
       "turbopixel\\": "src/"
@@ -24,9 +38,5 @@
     "psr-4": {
       "Tests\\": "tests/"
     }
-  },
-  "require-dev": {
-    "subiabre/appgati": "dev-master",
-    "phpunit/phpunit": "9.5.9"
   }
 }

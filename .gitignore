@@ -1,4 +1,3 @@
-EanValidator.*
-Gs1Validator.iml
+.idea/
 vendor/
 composer.lock
