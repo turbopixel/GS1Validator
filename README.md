@@ -80,3 +80,6 @@ Array
     [Number of involuntary context switches] => 16
 )
 ```
+
+## License (CC BY-SA 4.0)
+Take a look into the LICENSE file.
