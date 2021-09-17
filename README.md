@@ -1,4 +1,4 @@
-# GS1Valdiator
+# GS1Valdiator (version 0.2)
 
 This library is a small gs1 barcode validation class.
 
