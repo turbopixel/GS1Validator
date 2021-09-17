@@ -2,7 +2,19 @@
 
 This library is a small gs1 barcode validation class.
 
-## Runtime 
+## Methods
+
+### public strLength(string $str) : int
+Get the string length
+
+### public isValidEan13(string $ean13) : bool
+Validate the EAN13 barcode number
+
+### public getEan13CheckDigit(string $ean13) : int
+Calculate the EAN13 check digit
+
+## Runtime results
+`php -f tests/performance.php`
 
 ```text
   System: Linux 4.19.0-10-amd64 #1 SMP Debian 4.19.132-1 (2020-07-24) x86_64 
@@ -10,7 +22,7 @@ This library is a small gs1 barcode validation class.
   
   /////////////////////////////////////////////////
   /////////////////////////////////////////////////
-                      StandardTest
+                 phpunit runtime test
   /////////////////////////////////////////////////
   /////////////////////////////////////////////////
 Array

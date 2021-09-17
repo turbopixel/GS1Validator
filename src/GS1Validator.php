@@ -18,26 +18,30 @@ class GS1Validator {
    */
   public function strLength(string $str) : int {
 
+    if (empty($str)) {
+      return 0;
+    }
+
     return strlen($str);
   }
 
   /**
    * Validate the EAN13 barcode number
    *
-   * @param string $ean
+   * @param string $ean13
    *
    * @return bool
    */
-  public function isValidEan13(string $ean) : bool {
-    $eanLength = $this->strLength($ean);
+  public function isValidEan13(string $ean13) : bool {
+    $ean13Length = $this->strLength($ean13);
 
-    if ($eanLength !== 13) {
+    if ($ean13Length !== 13) {
       return false;
     }
 
-    $checkDigit = $this->getEan13CheckDigit($ean);
+    $checkDigit = $this->getEan13CheckDigit($ean13);
 
-    return $checkDigit === (int)$ean[12];
+    return $checkDigit === (int)$ean13[12];
   }
 
   /**
